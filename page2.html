@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time to Breathe</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="Downloads/logo.png" alt="logo" class="logo">
+                <span class="logo-text">Zen Den</span>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <nav class="navi" id="navMenu">
+                <a href="home.html">Home</a>
+                <a href="page2.html">The Breath</a>
+                <a href="page3.html">The Path</a>
+                <a href="page4.html">FAQ</a>
+                <a href="page5.html">The Connection</a>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="contenta">
+            <h1>Take a Moment</h1>
+            <p>Pause. Relax. Breathe deeply and let the world fade for a while.</p>
+        </div>
+        <div class="breathe">
+
+            <video controls>
+                <source src="Downloads/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+
+        <div class="breath-guide">
+
+            <h2>A Gentle Breathing Guide</h2>
+            <br>
+            <p>
+                Sometimes our minds move too quickly and our bodies forget to slow down.
+                Taking a few moments to breathe deeply can help calm your thoughts and
+                bring your focus back to the present moment.
+            </p>
+            <br>
+            <h4>
+                Follow this simple rhythm while watching the video:
+                </p>
+            </h4>
+
+            <ul>
+                <li>Breathe in slowly through your nose for 4 seconds.</li>
+                <li>Hold the breath gently for 4 seconds.</li>
+                <li>Exhale slowly through your mouth for 6 seconds.</li>
+                <li>Repeat the cycle for a few minutes.</li>
+            </ul>
+            <br>
+            <p>
+                There is no need to rush. Let each breath be soft and natural.
+                Allow your shoulders to relax and your thoughts to pass like clouds.
+                This small pause can make a big difference in your day.
+            </p>
+
+        </div>
+    </section>
+
+
+    <footer>
+        <p>&#169; 2026 Zen Den. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("navMenu").classList.toggle("show");
+        }
+    </script>
+
+</body>
+
+</html>

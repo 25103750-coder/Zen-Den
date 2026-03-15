@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share your story</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="fade-in">
+
+    <header>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="Downloads/logo.png" alt="logo" class="logo">
+                <span class="logo-text">Zen Den</span>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <nav class="navi" id="navMenu">
+                <a href="home.html">Home</a>
+                <a href="page2.html">The Breath</a>
+                <a href="page3.html">The Path</a>
+                <a href="page4.html">FAQ</a>
+                <a href="page5.html">The Connection</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div> <video autoplay muted loop id="bgvideo">
+                <source src="Downloads/clouds.mp4" type="video/mp4">
+            </video>
+        </div>
+        <section class="share-form">
+            <h1>Share Your Story</h1>
+            <form id="storyForm" action="/action_page.php">
+                <label for="story">Your story:</label>
+                <textarea id="story" name="story" rows="6" placeholder="Take a deep breath and write..."></textarea>
+                <input type="submit" value="Submit" class="submit-btn">
+            </form>
+            <div id="popupMessage" class="popup-message">
+                Your story has been shared! 🌿 Keep breathing and smiling 😊
+            </div>
+        </section>
+
+        <div class="HELP">
+            <h1>Emergency Helpline</h1>
+            <p><strong>Emergency hotline: 911</strong></p>
+            <p>Tawag Paglaum - Centro Bisaya 0966-467-9626</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&#169; 2026 Zen Den. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("navMenu").classList.toggle("show");
+        }
+
+        const form = document.getElementById("storyForm");
+        const popup = document.getElementById("popupMessage");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            popup.style.display = "block";
+
+            setTimeout(function () {
+                popup.style.display = "none";
+            }, 3000);
+
+            form.reset();
+        });
+    </script>
+
+</body>
+
+</html>
